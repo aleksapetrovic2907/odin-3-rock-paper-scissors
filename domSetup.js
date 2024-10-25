@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", setupDom);
 
-let results;
+let resultsHistory;
 
 function setupDom() {
     // Generate buttons.
@@ -24,11 +24,11 @@ function setupDom() {
     buttonsContainer.appendChild(paperBtn);
     buttonsContainer.appendChild(scissorsBtn);
 
-    results = document.getElementById("results");
+    resultsHistory = document.getElementById("results-history");
 }
 
-function addNewResultToList(result) {
+function addNewResult(result) {
     const resultElement = document.createElement("li");
     resultElement.textContent = result;
-    results.insertBefore(resultElement, results.firstChild);
+    resultsHistory.insertBefore(resultElement, resultsHistory.firstChild);
 }
