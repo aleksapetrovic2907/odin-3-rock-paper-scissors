@@ -1,8 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound() {
-    let humanChoice = getHumanChoice();
+function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
 
     // If draw.
@@ -34,14 +33,4 @@ function getComputerChoice() {
         default:
             return 'scissors';
     }
-}
-
-function getHumanChoice() {
-    let choice;
-
-    do {
-        choice = prompt("Choose between rock, paper and scissors.").toLowerCase().trim();
-    } while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors');
-
-    return choice;
 }
