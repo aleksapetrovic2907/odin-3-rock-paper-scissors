@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", setupDom);
 
+let results;
+
 function setupDom() {
     // Generate buttons.
     const rockBtn = document.createElement("button");
@@ -21,4 +23,12 @@ function setupDom() {
     buttonsContainer.appendChild(rockBtn);
     buttonsContainer.appendChild(paperBtn);
     buttonsContainer.appendChild(scissorsBtn);
+
+    results = document.getElementById("results");
+}
+
+function addNewResultToList(result) {
+    const resultElement = document.createElement("li");
+    resultElement.textContent = result;
+    results.insertBefore(resultElement, results.firstChild);
 }
