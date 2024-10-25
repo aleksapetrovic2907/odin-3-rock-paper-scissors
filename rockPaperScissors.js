@@ -6,19 +6,19 @@ function playRound(humanChoice) {
 
     // If draw.
     if (humanChoice === computerChoice) {
-        console.log(`It's a draw, you both chose ${humanChoice}!`);
+        addNewResultToList(`It's a draw, you both chose ${humanChoice}!`);
     }
     // If player won.
     else if ((humanChoice == 'rock' && computerChoice == 'scissors')
         || (humanChoice == 'paper' && computerChoice == 'rock')
         || (humanChoice == 'scissors' && computerChoice == 'paper')) {
-        console.log(`You've won, ${humanChoice} beats ${computerChoice}!`);
         humanScore++;
+        addNewResultToList(`You've won, ${humanChoice} beats ${computerChoice}!`);
     }
     // If player lost.
     else {
-        console.log(`You've lost, ${computerChoice} beats ${humanChoice}!`);
         computerScore++;
+        addNewResultToList(`You've lost, ${computerChoice} beats ${humanChoice}!`);
     }
 }
 
