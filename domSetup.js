@@ -11,6 +11,11 @@ function setupDom() {
     const scissorsBtn = document.createElement("button");
     scissorsBtn.textContent = "Scissors";
 
+    // Add event listeners to buttons.
+    rockBtn.addEventListener("click", () => playRound('rock'));
+    paperBtn.addEventListener("click", () => playRound('paper'));
+    scissorsBtn.addEventListener("click", () => playRound('scissors'));
+
     // Append buttons to DOM.
     const buttonsContainer = document.getElementById("buttons-container");
     buttonsContainer.appendChild(rockBtn);
