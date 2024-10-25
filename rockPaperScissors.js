@@ -1,12 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-function playGame(rounds = 5) {
-    for (let i = 0; i < rounds; i++) {
-        playRound();
-    }
-}
-
 function playRound() {
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
