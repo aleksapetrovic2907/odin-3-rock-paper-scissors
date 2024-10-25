@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", setupDom);
 
 let resultsHistory;
+let humanScoreElement;
+let computerScoreElement;
 
 function setupDom() {
     // Generate buttons.
@@ -25,10 +27,16 @@ function setupDom() {
     buttonsContainer.appendChild(scissorsBtn);
 
     resultsHistory = document.getElementById("results-history");
+    humanScoreElement = document.getElementById("human-score");
+    computerScoreElement = document.getElementById("computer-score");
 }
 
 function addNewResult(result) {
     const resultElement = document.createElement("li");
     resultElement.textContent = result;
     resultsHistory.insertBefore(resultElement, resultsHistory.firstChild);
+
+    // Update scores.
+    humanScoreElement.textContent = humanScore;
+    computerScoreElement.textContent = computerScore;
 }
